@@ -1,7 +1,7 @@
 {
-  "name": "udemy-project-3",
+  "name": "test",
   "version": "0.0.0",
-  "description": "Udemy Project 3",
+  "description": "test",
   "main": "index.js",
   "engines": {
     "node": "8.11.3",
