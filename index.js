@@ -6,8 +6,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('auth/google', (req, res) => {
-    res.sent({ hello : 'buddy'});
+    res.send({ hello : 'buddy'});
 });
 
-const PORT = process.env.PORT || 5000;
+consd PORT = process.env.PORT || 5000;
 app.listen(PORT);
