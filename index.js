@@ -5,26 +5,6 @@ const keys = require('./config/keys'); // No need to add the .js extension here
 
 const app = express();
 
-passport.use(
-    new GoogleStrategy(
-        {
-            clientID: keys.googleClientID,
-            clientSecret: keys.googleClientSecret,
-            callbackURL: '/auth/google/callback'
-        }, 
-        (accessToken) => {
-            console.log(accessToken);
-        }
-    )
-);
-
-// Route handler
-app.get(
-    '/auth/google',
-    passport.authenticate('google', {
-        scope: ['profile', 'email'] // Ask google for profile and email
-    })
-);
 
 app.get(
     '/', () =>
