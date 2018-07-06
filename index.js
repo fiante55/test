@@ -5,7 +5,7 @@ app.get('/', (req, res) => {
     res.send({ bye: 'buddy' });
 });
 
-app.get('auth/google', (req, res) => {
+app.get('/auth/google', (req, res) => {
     res.send({ hello : 'buddy'});
 });
 
