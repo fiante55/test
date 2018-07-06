@@ -30,7 +30,7 @@ app.get(
 // When the users comes back, Passport deals with the code
 app.get(
     '/auth/google/callback', 
-    pass.authenticate('google')
+    passport.authenticate('google')
 );
 
 
