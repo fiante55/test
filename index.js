@@ -19,16 +19,18 @@ passport.use(
 );
 
 // Route handler
+// When users go to /auth/google, ask passport to get the Google code with the GoogleStrategy
 app.get(
     '/auth/google',
     passport.authenticate('google', {
-        scope: ['profile', 'email'] // Ask google for profile and email
+        scope: ['profile', 'email'] // Ask google for code with profile and email permission
     })
 );
 
+// When the users comes back, Passport deals with the code
 app.get(
-    '/', () =>
-    console.log("test")
+    '/auth/google/callback', 
+    pass.authenticate('google')
 );
 
 
